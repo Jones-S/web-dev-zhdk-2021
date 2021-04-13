@@ -9,3 +9,4 @@ https://paul.zhdk.ch/course/view.php?id=1561
 
 **→ Miro-Links:**
 - Lektion 01: https://miro.com/app/board/o9J_lMmKlGw=/ (password in Paul)
+- Lektion 02: https://miro.com/app/board/o9J_lKB-Ezk=/ (password in Paul)
