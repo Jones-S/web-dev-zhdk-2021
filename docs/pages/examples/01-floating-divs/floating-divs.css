@@ -1,0 +1,46 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+code {
+  display: block;
+  font-family: monospace;
+  margin: 30px 0;
+}
+
+.clearfix {
+  /* resetting float */
+  clear: both;
+}
+
+.item {
+  width: 25%;
+  height: 150px;
+  background-color: #000;
+}
+
+.item--red {
+  background-color: #FC4F4E;
+}
+
+.item--blue {
+  background-color: #054692;
+}
+
+.item--yellow {
+  background-color: #FFDD08;
+}
+
+.section2 .item {
+  float: left;
+  margin: 0 10px 10px 0;
+}
+
+.section2 .item--red {
+  float: right;
+}

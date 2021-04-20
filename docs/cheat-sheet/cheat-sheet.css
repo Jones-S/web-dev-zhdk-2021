@@ -1,0 +1,129 @@
+/* Different stylings: */
+
+/* tag */
+h1 {
+  color: red;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors */
+
+
+/* classes */
+.classname {
+  color: red;
+}
+
+
+/* id */
+#idname {
+  color: red;
+}
+
+/* attribute selectors */
+selects all a tags with a set title attribute
+/* <a href="..." title="link title">Link</a> */
+a[title] { 
+  color: red;
+}
+
+
+
+
+/* Combination */
+.classname1, .classname2 {
+  color: red;
+}
+
+.classname1.classname2 {
+  color: red;
+}
+
+#idname a {
+  color: red;
+}
+
+div h1 {
+  color: red;
+}
+
+div+a {
+  color: red;
+}
+
+
+
+
+
+
+/* 
+ * --------------------------------------
+ * QUIZ 
+ * --------------------------------------
+ */
+
+h1.heading {
+  color: red;
+}
+/* vs. */
+.wrapper .heading {
+  color: blue;
+}
+
+/* blue wins */
+
+
+/* ------------------------------------------ */
+div .heading {
+  color: red;
+}
+/* vs */
+h1.heading {
+  color: blue;
+}
+
+/* blue wins */
+
+
+/* ------------------------------------------ */
+section .heading {
+  color: red;
+}
+
+/* vs */
+div .heading {
+  color: blue;
+}
+
+/* blue wins */
+
+
+/* ------------------------------------------ */
+#first-section.heading {
+  color: red;
+}
+
+/* vs */
+.heading {
+  color: blue;
+}
+
+/* blue wins */
+
+
+/* ------------------------------------------ */
+#main #first-section li {
+  color: red;
+}
+
+/* vs */
+div .section .wrapper.title-wrapper ul .list-item {
+  color: blue;
+}
+
+/* red wins */
+
+
+
+div {
+  display: block;
+}
