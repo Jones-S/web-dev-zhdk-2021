@@ -1,0 +1,52 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  width: 400px;
+  height: 210px;
+  margin: 100px auto 300px;
+  background-color: #FC4F4E;
+  padding: 10px;
+}
+
+.item {
+  width: 80px;
+  height: 80px;
+  background-color: #FF7A45;
+  padding: 1em;
+  font-size: 12px;
+}
+
+.item--relative {
+  position: relative;
+  top: 15px;
+  left: 40px;
+}
+
+.section3 {
+  /* background-color: #faf6f1; */
+  position: relative;
+}
+
+.item--absolute {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.section3 .wrapper {
+  /* position: relative; */
+}
+
+.item--fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
