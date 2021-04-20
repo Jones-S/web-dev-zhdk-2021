@@ -1,0 +1,24 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.item {
+  width: 210px;
+  height: 210px;
+  margin: 150px auto;
+  background-color: #FC4F4E;
+  padding: 30px 29px 28px 27px;
+  border: 12px solid #C23A50;
+}
+
+.item-content {
+  background-color: #FF7A45;
+  width: 100%;
+  height: 100%;
+}
