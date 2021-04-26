@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Cygnito-Mono';
+  font-style: normal;
+  font-weight: normal;
+  src: url('~@/assets/fonts/cygnito-mono.woff2') format('woff2'),
+    url('~@/assets/fonts/cygnito-mono.woff') format('woff'),
+    url('~@/assets/fonts/cygnito-mono.ttf') format('truetype');
+  /* display content before font is loaded! */
+  font-display: swap;
+}
