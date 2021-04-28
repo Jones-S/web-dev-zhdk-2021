@@ -1,0 +1,72 @@
+* {
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #DDDFE6;
+}
+
+.outer-wrapper {
+  /* 
+   * for vertical centering: display flex, 
+   * and vertical direction together with centering the content. 
+   * more about flexbox:
+   * https: //css-tricks.com/snippets/css/a-guide-to-flexbox/
+   * more about centering content:
+   * https: //css-tricks.com/centering-css-complete-guide/
+   */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.wrapper {
+  /* background-color: burlywood; */
+  /* height: 80vh; */
+  display: flex;
+  /* instead of using a margin on the .column we could just
+  ust justify-content to distribute the 
+  items equally in the flex direction: */
+
+  /* justify-content: space-between; */
+  margin: 0 auto;
+  width: 80%;
+}
+
+.column {
+  height: 400px;
+  background-color: #F34727;
+  margin-right: 15px;
+  flex: 1 0 25%;
+}
+
+.special {
+  /* here I would be able to override 
+  stylings of the default column */
+}
+
+.column:last-child {
+  /* 
+   * pseudo-class last-child
+   * allows me to target the last element
+   * read more: https: //developer.mozilla.org/en-US/docs/Web/CSS/:last-child
+   * or general about pseudo-classes: https: //developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
+   */
+  margin-right: 0;
+}
+
+/* if we want to display a link, which is per default
+a `display: inline;` element, we could change it */
+a {
+  display: block;
+  background-color: cornsilk;
+}
+
+
+@media screen and (min-width: 1000px) {
+  .column {
+    margin-right: 45px;
+  }
+}
+
