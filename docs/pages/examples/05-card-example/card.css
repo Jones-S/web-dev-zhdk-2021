@@ -1,0 +1,192 @@
+/* Let's make use of the fresh css custom properties,
+also called CSS variables:
+https: //developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+we don't use the full potential here, 
+but we use it to have settings variables, 
+which can be overridden easily
+ */
+
+:root {
+  --card-content-width: 50%;
+  --spacer-default: 1.5rem;
+  --font-size-default: 1.5rem;
+}
+
+
+* {
+  /* Using typekit font noto-sans, 
+  for everything on the page
+  imported in head of html file */
+  font-family: noto-sans, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  /* resetting most basic things, to override browser defaults
+  One of the most famous css resets can be found here:
+  https: //meyerweb.com/eric/tools/css/reset/ 
+  I will only go for a very basic one:*/
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+html {
+  /* By using this default-font size, we have a a root font-size of 10px.
+  Default fz is normally 16px. So 16px * 0.625 = 10px 
+  Having 10px allows to write sizes in rem without having to do too much math.
+  Example: 30rem = 300px */
+  font-size: 62.5%;
+}
+
+/* If you wonder how to name things in css, 
+there are a few nice methodologies to folliow. 
+My favorite is BEM, which is widely used in the industry:
+http://getbem.com/
+I also found a nice article writing about this issue of naming:
+http://bdavidxyz.com/blog/how-to-name-css-classes/
+I agree on most of the points being made.
+*/
+
+.card {
+  /* mimicks a quartet card game card size */
+  width: 430px;
+  height: 665px;
+  /* For consistency I overide this with rem values. 
+  One could delete the pixel values of course */
+  width: 43rem;
+  height: 66.5rem;
+
+  /* As I have only white typography on the card I will set the font color here */
+  color: #fff;
+
+  /* centering the card with margin: auto.
+  This only works because of the parent element taking full viewport width. */
+  margin: 1rem auto;
+  border-radius: 1.5rem;
+  background-color: #000;
+  padding: 1.5rem;
+
+  /* Easy way to center all elements within my card,
+  by using flexbox and align-items */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* I normally try to use somewhat of the same order of appearance
+in css and html. So I would start with the list up here.
+This is just a help for finding things more quickly. */
+.card-title {
+  font-size: 3rem;
+  line-height: 1.2;
+  width: var(--card-content-width);
+  margin-bottom: var(--spacer-default);
+}
+
+/* The image wrapper is needed for having an positioned element, 
+to whose relation we can place the image label */
+.image-wrapper {
+  width: var(--card-content-width);
+  margin-bottom: calc(var(--spacer-default) * 2);
+
+  /* This sets a new positioned container,
+  to which the absolute positioning of the label relates to: */
+  position: relative;
+}
+
+/* I don't style by tag, but only by class to allow
+for later maintainability and scalability */
+.card-image {
+  max-width: 100%;
+}
+
+.image-label {
+  font-size: var(--font-size-default);
+  /* Here I place the label to the right edge of the image
+  and 50% from it's top edge. */
+  position: absolute;
+  right: 0;
+  top: 50%;
+
+  transform-origin: 50% 50%;
+  
+  /* And now I move the label into place.
+  1. I translate its position: 
+  x: 50% of it's own width to the right + another 2rem for some distance to the image
+  y: -50% into y direction, to actually center it in relation to the image.
+  (the top: 50%; property does center the upper left corner of the label)
+  2. then I rotate around the transform origin (center of the label).
+  The order of the transforms is important!*/
+  transform: translate(calc(50% + 2rem), -50%) rotate(90deg);
+}
+
+.card-text {
+  font-size: var(--font-size-default);
+  line-height: 1.2;
+
+  /* Here I use a somewhat bigger width, than the normal content-width.
+  Percentage are always in relation to a positioned parents width. */
+  width: 80%;
+
+  /* Sometimes, for strokes, one can use pixel anyway.
+  Most of the times lines should take full pixel values,
+  otherwise if a display tries to display 1.74px one may experience
+  weird rendering artefacts.
+  Even if they don't scale with the content, it is still alright. */
+  border-bottom: 2px solid #fff;
+
+  /* setting some distance to the border */
+  padding-bottom: 1rem;
+
+  /* using consistent spacing values generates vertical rythm */
+  margin-bottom: var(--spacer-default);
+}
+
+.card-stats {
+  /* removing the disc list style */
+  list-style: none;
+  width: var(--card-content-width);
+}
+
+.card-stat-item {
+  font-size: var(--font-size-default);
+  
+  /* Making space for the custom list item */
+  padding-left: 2rem;
+
+  /* Creating a new position relation for the pseudo element below */
+  position: relative;
+}
+
+/* Using a pseudo-element for the list icon */
+.card-stat-item::before {
+  display: inline-block;
+  content: '';
+
+  /* Using em here to make it dependent on the lists font size.
+  if the fz changes, the icons size is still kind of correct. */
+  width: 0.4em; 
+  height: 0.4em; 
+  background-color: #62BCAD;
+
+  /* Moving it into place */
+  position: absolute;
+  top: 0.6em;
+  left: 0;
+}
+
+/* Sometimes it's OK to style a tag, 
+because you probably want to have consisten link styling 
+through your page.
+If needed it can be easily overriden */
+a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #D05C63;
+  text-decoration: none;
+}
