@@ -1,0 +1,117 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background: white;
+}
+.Card {
+  width: 430px;
+  height: 665px;
+  background: #ffffff;
+  margin: 10px auto;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  box-shadow: 4px 4px 10px 1px #000;
+}
+
+.Card-Top {
+  height: 250px;
+  width: 330px;
+  background: rgb(128, 255, 181);
+  background: linear-gradient(rgb(128, 255, 181), #ffffff);
+  position: relative;
+  float: right;
+  border-top-right-radius: 20px;
+}
+
+h1 {
+  font-family: "Pinyon Script", cursive;
+  margin: 20px;
+  font-size: 30px;
+  color: rgb(246, 255, 164);
+  text-align: center;
+}
+
+h1:hover{
+color:blueviolet;
+}
+
+h2 {
+  font-family: "Pinyon Script", cursive;
+  margin: 40px;
+  color: rgb(246, 255, 164);
+  text-align: center;
+  font-size: 35px;
+  
+}
+
+h2:hover{ 
+color: blueviolet;
+}
+
+h3 {
+  color: rgb(255, 0, 191);
+  text-align: center;
+}
+
+
+
+.Card-Left {
+  height: 665px;
+  width: 100px;
+  background: rgb(255, 216, 245);
+  float: left;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.Box1 {
+  height: 415px;
+  width: 330px;
+  border-bottom-right-radius: 20px;
+  background: linear-gradient(#ffffff, cornsilk);
+  position: absolute;
+  top: 100%;
+  left: 0%;
+}
+
+.Box2 {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  height: 75px;
+  width: 243px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  box-shadow: 4px 4px 10px 1px #000;
+  background: rgb(141, 141, 238);
+}
+
+.Box3 {
+  height: 260px;
+  width: 243px;
+  position: absolute;
+  top: 150%;
+  left: 10%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  box-shadow: 4px 4px 10px 1px #000;
+  background: rgb(141, 141, 238);
+  
+}
+
+.Image img {
+  width: 300px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  top: 60%;
+  left: -20%;
+  box-shadow: 4px 4px 10px 1px #000;
+}
+

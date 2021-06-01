@@ -1,0 +1,114 @@
+body {
+  background-color: gray;
+}
+
+@font-face {
+  font-family: 'WhyteInktrapVariable';
+  src: url(./fonts/ABCWhyteInktrapVariable-Trial.ttf) format("truetype-variations");
+  font-weight: 125 950;
+  font-style: oblique 0deg 20deg;
+}
+
+@font-face {
+  font-family: 'WhyteInktrapSuperItalic';
+  src: url(./fonts/ABCWhyteInktrap-SuperItalic-Trial.otf);
+}
+
+.mainbox {
+
+  display: center;
+  width: 430px;
+  height: 665px;
+  margin: 10px auto;
+  border-style: solid;
+  border-width: 2px;
+  background-color: whitesmoke;
+}
+
+.image {
+
+  position: relative;
+  margin: 11px auto;
+   height: 470px;
+  width: 25em;
+  border-style: solid;
+  border-width: 2px;
+  background-color: #9E3B5A;
+}
+
+.title {
+
+  position: relative;
+  margin-top: -3px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 2.7em;
+  width: 25em;
+  border-style: solid;
+  border-width: 2px;
+
+  background-color: #E2C51A;
+
+}
+
+.doris {
+  margin-top: -4px;
+  margin-left: 4px;
+
+  font-family: 'WhyteInktrapSuperItalic';
+  font-weight: 800;
+  font-size: 2.3em;
+}
+
+.leuthard {
+  float: right;
+  margin-top: -53px;
+  margin-right: 4px;
+  font-family: 'WhyteInktrapSuperItalic';
+  font-weight: 800;
+  font-size: 2.3em;
+}
+
+.subtitle {
+
+  position: relative;
+  margin-top: 7px;
+  margin-left: 13px;
+  margin-right: auto;
+  font-family: 'WhyteInktrapVariable';
+  font-weight: 750;
+  font-size: 1.1em;
+  font-style: oblique 15deg;
+  height: 1.5em;
+  width: 13.5em;
+  border-style: solid;
+  border-width: 2px;
+  background-color: #E2C51A;
+}
+
+.subtitle_text {
+  margin-left: 3px;
+  margin-top: 1px;
+}
+
+.box_description {
+
+  position: relative;
+  margin-top: 7px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 4em;
+  width: 25em;
+  border-style: solid;
+  border-width: 2px;
+  background-color: #E2C51A;
+}
+
+.description {
+  margin-left: 3px;
+  font-family: 'WhyteInktrapVariable';
+  font-weight: 500;
+  font-size: 0.85em;
+  line-height: 1.2em;
+}
+

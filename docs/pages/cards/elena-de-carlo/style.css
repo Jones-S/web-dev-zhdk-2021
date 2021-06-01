@@ -1,0 +1,62 @@
+
+@font-face {
+    font-family: PTSansCaption-Bold;
+    src: url(assets/font/PTSansCaption-Bold.ttf);
+}
+body{
+ background-color: rgb(24, 24, 24); 
+}
+.card {
+    width: 430px;
+    height: 665px;
+    margin: 10px auto;
+    background-color: #527d88;
+    border-radius: 10px;
+    border: 1px solid rgb(223, 222, 255); 
+  }
+
+.planetholder{
+ width: 350px;
+ height: 400px;
+ background-color: rgb(37, 37, 37);
+ border-radius: 10px 0px 10px 0px;
+ float:left;
+ 
+ 
+}
+.planetimage{
+border-radius: 10px;
+ 
+}
+.titel p {
+    transform-origin: top left;
+    transform: rotate(90deg);
+    font-size: 3.5em;
+    padding: 0px;
+    margin: 5px 0px ;
+    float: right;
+    width: 0;
+    color:#2b363a;
+    font-family:PTSansCaption-Bold;
+   
+}
+
+.strenght {
+   float: left;
+   background-image: url('assets/infobild.png');
+   width:430px;
+   height: 200px;
+   border-radius: 0px 0px 10px 10px;
+   margin: 65px 0px 0px 0px;
+}
+.strenght h1{
+    text-align: center;
+    margin:35px 0px 0px 0px;
+    padding: 0px;
+    font-size: 1.2em;
+    font-family:PTSansCaption-Bold;
+}
+.strenght p{
+text-align: center;
+margin:20px 0px 0px 0px;
+}

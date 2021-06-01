@@ -1,0 +1,71 @@
+.card {
+  /* mimicks a quartet card game card size */
+  width: 430px;
+  height: 665px;
+
+  /* centering it */
+  margin: 10px auto;
+
+  /* background-color  */
+  background-color: #e6c11f;
+
+  /* round corners */
+  border-radius: 10px;
+
+
+}
+
+*
+{
+
+  font-family: noto-sans, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+ 
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+/*how do I bring this to the fron? I tried z-index with set position for all the elements,
+ but it won't work.*/
+.cardclass{
+  width: 100px;
+  height: 100px;
+  background: red;
+  border-radius: 50%
+}
+
+.image img { 
+  width: 424px; 
+  height: auto;
+border-radius: 10px;
+border-bottom-left-radius: 0px; 
+border-bottom-right-radius: 0px; 
+margin:3px;
+}
+
+.descriptionbox {
+width: 424px;
+height: 177px;
+margin-top: -10px;
+margin-left: 3px;
+ background-color:rgb(238, 238, 222);
+ border-radius: 10px;
+ border-top-left-radius:0px;
+ border-top-right-radius:0px;
+
+}
+
+.title {
+font-size: 2rem;
+line-height: 1.2;
+}
+
+.description{
+  font-size: 1rem;
+  line-height: 1.2;
+  }
