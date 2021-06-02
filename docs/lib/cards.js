@@ -17,14 +17,14 @@ class Slider {
     this.currentPageIndex += 1;
     if (this.currentPageIndex > this.pages.length) this.currentPageIndex = 0;
     console.log('this.currentPage: ', this.currentPageIndex);
-    return `./cards/${this.pages[this.currentPageIndex].path}/index.html`;
+    return `./cards/${this.pages[this.currentPageIndex].path}`;
   }
   
   callPrevious() {
     this.currentPageIndex -= 1;
     if (this.currentPageIndex < 0) this.currentPageIndex = this.pages.length - 1;
     console.log('this.currentPage: ', this.currentPageIndex);
-    return `./cards/${this.pages[this.currentPageIndex].path}/index.html`;
+    return `./cards/${this.pages[this.currentPageIndex].path}`;
   }
 }
 
