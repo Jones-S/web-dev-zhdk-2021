@@ -16,14 +16,12 @@ class Slider {
   callNext() {
     this.currentPageIndex += 1;
     if (this.currentPageIndex > this.pages.length - 1) this.currentPageIndex = 0;
-    console.log('this.currentPage: ', this.currentPageIndex);
     return `./cards/${this.pages[this.currentPageIndex].path}`;
   }
   
   callPrevious() {
     this.currentPageIndex -= 1;
     if (this.currentPageIndex < 0) this.currentPageIndex = this.pages.length - 1;
-    console.log('this.currentPage: ', this.currentPageIndex);
     return `./cards/${this.pages[this.currentPageIndex].path}`;
   }
 
@@ -47,7 +45,6 @@ async function fetchCards() {
 function next () {
   if (pageSlider) {
     const path = pageSlider.callNext();
-    console.log('path: ', path)
     showPage(path);
   }
 }
@@ -55,7 +52,6 @@ function next () {
 function prev () {
   if (pageSlider) {
     const path = pageSlider.callPrevious();
-    console.log('path: ', path)
     showPage(path);
   }
 }
