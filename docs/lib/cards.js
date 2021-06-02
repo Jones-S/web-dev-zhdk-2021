@@ -15,7 +15,7 @@ class Slider {
   
   callNext() {
     this.currentPageIndex += 1;
-    if (this.currentPageIndex > this.pages.length) this.currentPageIndex = 0;
+    if (this.currentPageIndex > this.pages.length - 1) this.currentPageIndex = 0;
     console.log('this.currentPage: ', this.currentPageIndex);
     return `./cards/${this.pages[this.currentPageIndex].path}`;
   }
