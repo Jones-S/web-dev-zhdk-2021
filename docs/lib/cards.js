@@ -78,7 +78,7 @@ function prev () {
 
 function showPage() {
   const iframe = document.createElement('iframe');
-  iframe.setAttribute('src', '/pages/cards/bin-martig/index.html');
+  iframe.setAttribute('src', './cards/bin-martig/index.html');
   iframe.setAttribute('class', 'iframe');
   iframe.setAttribute('sandbox', 'true');
   document.body.appendChild(iframe);
