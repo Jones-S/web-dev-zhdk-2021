@@ -1,4 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .iframe {
   width: 100vw;
   height: 100vh;
+}
+
+.button {
+  border: 0;
+  padding: 0;
+  width: 70px;
+  height: 70px;
+  overflow: visible;
+  text-align: inherit;
+  background: #3A3535;
+  border-radius: 500px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  position: fixed;
+  top: 50vh;
+  transform: translateY(-50%);
+  left: 20px;
+  transition: transform ease 0.3s;
+}
+
+.button--next {
+  left: auto;
+  right: 20px;
+}
+
+.button:hover {
+  transform: translateY(-50%) scale(1.05);
 }
