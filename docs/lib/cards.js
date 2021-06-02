@@ -4,7 +4,7 @@ let buttons = {
   prev: false,
   next: false
 };
-let iframe;
+let container;
 let pageSlider = false;
 
 class Slider {
@@ -17,34 +17,14 @@ class Slider {
     this.currentPageIndex += 1;
     if (this.currentPageIndex > this.pages.length) this.currentPageIndex = 0;
     console.log('this.currentPage: ', this.currentPageIndex);
+    return `./cards/${this.pages[this.currentPageIndex].path}/index.html`;
   }
   
   callPrevious() {
     this.currentPageIndex -= 1;
     if (this.currentPageIndex < 0) this.currentPageIndex = this.pages.length - 1;
     console.log('this.currentPage: ', this.currentPageIndex);
-  }
-
-  async fetchPage() {
-    console.log('...fetching');
-    let page;
-
-    await fetch('./cards/bin-martig/index.html')
-      .then(function (response) {
-        return response.text();
-      })
-      .then(function (html) {
-        // Convert the HTML string into a document object
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, 'text/html');
-        console.log('doc: ', doc)
-        page = doc;
-      })
-      .catch(function (err) {
-        console.warn('Something went wrong.', err);
-      });
-
-    return page;
+    return `./cards/${this.pages[this.currentPageIndex].path}/index.html`;
   }
 }
 
@@ -60,32 +40,35 @@ async function fetchCards() {
   return cards;
 }
 
-async function next () {
+function next () {
   if (pageSlider) {
-    pageSlider.callNext();
-    const page = await pageSlider.fetchPage();
-    showPage(page);
+    const path = pageSlider.callNext();
+    console.log('path: ', path)
+    showPage(path);
+    
   }
 }
 
 function prev () {
   if (pageSlider) {
-    pageSlider.callPrevious();
-    const page = pageSlider.fetchPage();
-    showPage(page);
+    const path = pageSlider.callPrevious();
+    console.log('path: ', path)
+    showPage(path);
+    
   }
 }
 
-function showPage() {
+function showPage(path) {
   const iframe = document.createElement('iframe');
-  iframe.setAttribute('src', './cards/bin-martig/index.html');
+  iframe.setAttribute('src', path);
   iframe.setAttribute('class', 'iframe');
   iframe.setAttribute('sandbox', 'true');
-  document.body.appendChild(iframe);
+  container.innerHTML = '';
+  container.appendChild(iframe);
 }
 
 function initUi() {
-  iframe = document.querySelector('[data-content]');
+  container = document.querySelector('[data-content]');
   buttons.prev = document.querySelector('[data-button="prev"]');
   buttons.next = document.querySelector('[data-button="next"]');
 

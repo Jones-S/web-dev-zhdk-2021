@@ -11,7 +11,7 @@ fs.readdir(directoryPath, function (err, directories) {
     }
 
     const cards = directories.filter(dir => {
-      return dir != '.DS_Store';
+      return dir != '.DS_Store' && dir != 'cards.json';
     })
     
     const data = [];
@@ -19,7 +19,7 @@ fs.readdir(directoryPath, function (err, directories) {
         // Do whatever you want to do with the file
         console.log(file);
         data.push({
-            path: `./${file}`
+            path: `${file}/index.html`
         });
     });
 
