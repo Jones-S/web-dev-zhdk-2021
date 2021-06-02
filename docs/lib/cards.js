@@ -76,15 +76,12 @@ function prev () {
   }
 }
 
-function showPage(page) {
-  console.log('page: ', page);
-  // iframe.innerHTML = page;
-
-  const iframeDoc = iframe.contentDocument ? iframe.contentDocument : iframe.contentWindow.document; // IE compatibility
-
-  iframeDoc.open('text/html');
-  iframeDoc.write(page.body.innerHTML);
-  iframeDoc.close();
+function showPage() {
+  const iframe = document.createElement('iframe');
+  iframe.setAttribute('src', '/pages/cards/bin-martig/index.html');
+  iframe.setAttribute('class', 'iframe');
+  iframe.setAttribute('sandbox', 'true');
+  document.body.appendChild(iframe);
 }
 
 function initUi() {
