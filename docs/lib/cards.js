@@ -64,7 +64,7 @@ function showPage(path) {
   const iframe = document.createElement('iframe');
   iframe.setAttribute('src', path);
   iframe.setAttribute('class', 'iframe');
-  iframe.setAttribute('sandbox', 'true');
+  iframe.setAttribute('sandbox', 'allow-scripts');
   container.innerHTML = '';
   container.appendChild(iframe);
 }
