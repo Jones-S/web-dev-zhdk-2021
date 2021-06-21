@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <title>スエニアのカード</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=DotGothic16&family=RocknRoll+One&family=Train+One&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="reset.css"> <!-- reset the margin values has to be written before anything -->
+  <link rel="stylesheet" href="card.css">
+</head>
+
+<body>
+
+  <div class="card">
+
+    <div class="cardbase">
+
+      <h1 class="cardtitle">スエニア狐の翼</h1>
+
+      <div class="dots">
+        <div class="dot">
+          <img src="img/circlestar.png" alt="星">
+        </div>
+        <div class="dot">
+          <img src="img/circlestar.png" alt="星">
+        </div>
+        <div class="dot">
+          <img src="img/circlestar.png" alt="星">
+        </div>
+        <div class="dot">
+          <img src="img/circlestar.png" alt="星">
+        </div>
+        <div class="dot">
+          <img src="img/circlestar.png" alt="星">
+        </div>
+      </div>
+      <div class="cardpicbox">
+        <div class="cardpic">
+          <img src="img/svenjawings.png" alt="スエニアの翼">
+        </div>
+      </div>
+      <div class="infobox">
+        <div class="infotable">
+          <table>
+            <tr>
+              <!-- tablerow -->
+              <td>攻撃力</td> <!-- offensive power-->
+              <td>1000</td>
+            </tr>
+            <tr>
+              <td>守備力</td> <!-- defensive power-->
+              <td>2500</td>
+            </tr>
+            <tr>
+              <td>スパーク</td>
+              <td>30 X</td>
+            </tr>
+          </table>
+        </div>
+        <div id="fee">🧚‍♀️</div>
+        <button id="feebutton" onclick="toggle('fee', 'hidefee')">隠す</button>
+        <br><br>
+        <p class="infotext">
+          <!--Fliesstext -->
+          -を破壊する1スベルカードを取り出すことができます。このカードをフィールドから,削除されると、することができます特殊召喚1 "鬼女ヘルバー"あなたの基地から。あなたの墓地で遊ぶから、相手のコントロール1のモンスタ
+        </p>
+        <div class="end">
+          <div class="line">
+          </div>
+          <div class="circle">
+          </div>
+          <div class="line">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="card.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'WhyteInktrapVariable';
+    src: url(../fonts/ABCWhyteInktrapVariable-Trial.ttf) format("truetype-variations");
+    font-weight: 125 950;
+    font-style: oblique 0deg 20deg;
+  }
+
+.mainbox{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.wrapper{
+    position: absolute;
+    width: 430px;
+    height: 665px;
+    margin: 10px auto;
+    border-style: solid;
+    border-width: 9px;
+    background-color: whitesmoke;
+    background-image: url(/images/fluehmah.png);
+}
+
+
+.slider{
+    margin-top: 50px;
+    position: absolute;
+    width: 430px;
+    height: 80px;
+    margin: 700px auto;
+   
+  
+    font-family: 'WhyteInktrapVariable';
+    font-weight: 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+.typo{
+    left: 15px;
+    font-family: 'WhyteInktrapVariable';
+    font-weight: 2;
+    font-size: 96px;
+    position: relative;
+    margin-top: -10px;
+    margin-bottom: -60px;
+    color: #D5081C;
+}   
+
+.typo2{
+    left: -15px;
+    font-weight: 900;
+    font-family: 'WhyteInktrapVariable';
+    font-size: 96px;
+    position: relative;
+    text-align: right;
+    margin-top: -20px;
+    color: #000000;
+}
+
+.typo3{
+    left: 15px;
+    font-weight: 2;
+    font-family: 'WhyteInktrapVariable';
+    font-size: 96px;
+    position: relative;
+    margin-top: -60px;
+    margin-bottom: -60px;
+    color: #D5081C;
+}   
+
+.typo4{
+    left: -15px;
+    font-weight: 900;
+    font-family: 'WhyteInktrapVariable';
+    font-size: 96px;
+    position: relative;
+    text-align: right;
+    margin-top: -20px;
+    color: #000000;
+}

@@ -2,8 +2,9 @@
 
 const path = require('path');
 const fs = require('fs');
+const folderName = 'cards2';
 
-const directoryPath = path.join(__dirname, 'cards');
+const directoryPath = path.join(__dirname, folderName);
 
 fs.readdir(directoryPath, function (err, directories) {
     if (err) {
@@ -26,7 +27,7 @@ fs.readdir(directoryPath, function (err, directories) {
     const json = JSON.stringify(data, null, null);
     const jsonSizeKB = Math.round((Buffer.byteLength(json, 'utf8') / 1024) * 100) / 100;
     const fileName = 'cards.json';
-    const savePath = `${__dirname}/cards`;
+    const savePath = `${__dirname}/${folderName}`;
     console.info(`Writing ${fileName} (Length: ${json.length}, Size: ${jsonSizeKB}kB)`);
 
     if (!fs.existsSync(savePath)) {

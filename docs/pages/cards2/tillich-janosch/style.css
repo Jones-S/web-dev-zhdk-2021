@@ -1,0 +1,102 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 248, 238);
+}
+
+.karte {
+  display: grid;
+  grid-template-columns: 430px;
+  grid-template-rows: 260px 288px 2px 115px;
+  grid-template-areas: "bild" "text" "linie" "eigenschaften";
+  border-radius: 20px;
+  background: white;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  filter: drop-shadow(5px 8px 5px rgb(170, 163, 155));
+}
+
+.bild {
+  grid-area: bild;
+  background: url("https://cdn.unitycms.io/image/2WGPHiR8Kvr9cB1iT9j8AU.gif");
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-size: cover;
+}
+
+.text {
+  grid-area: text;
+  margin: 35px;
+}
+
+.text .typ {
+  color: rgb(181, 211, 29);
+  font-size: 18px;
+}
+
+.text p {
+  color: grey;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.text h2 {
+  margin-top: 10px;
+  font-size: 34px;
+}
+
+.linie {
+  background: grey;
+}
+
+.eigenschaften {
+  grid-area: eigenschaften;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: rgb(122, 180, 169);
+}
+
+.eigenschaften .eigenschaft {
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+
+.eigenschaften .preis {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.eigenschaften .beschreibung {
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.mitte {
+  border-left: 2px solid grey;
+  border-right: 2px solid grey;
+}
+
+.links:hover {
+  border-bottom-left-radius: 20px;
+  background: rgb(41, 151, 129);
+}
+
+.rechts:hover {
+  border-bottom-right-radius: 20px;
+  background: rgb(41, 151, 129);
+}
+
+.mitte:hover {
+  background: rgb(41, 151, 129);
+}

@@ -1,0 +1,150 @@
+.typefaceTitle{
+    font-family: railroad-gothic-atf, helvetica, sans-serif;
+    font-size: 40px;
+    font-weight:bold;
+    color:rgb(255, 255, 255);
+    }
+    .typefaceDescription{
+    font-family: david-sans, helvetica, sans-serif;
+    font-size: 22px;
+    font-weight:normal;
+    color:rgb(255, 255, 255);
+    }
+    body
+    {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(20, 20, 20)
+    }
+    /*
+    .container
+    {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 1200px;
+    transform-style: preserve-3d,
+    } */
+    .container .box
+    {
+    position: relative;
+    width: 425px;
+    height: 660px;
+    margin: 40px;
+    background: #000000;
+    border-radius: 20px;
+    /* transform-style: preserve-3d; */
+    border-style: solid;
+    border-color: #ffffff;
+    border-radius: 60px;
+    border-width: 2px;
+    }
+    /*
+    .container .box::before
+    {content: 'CRESENT';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 6em;
+    font-weight: 900;
+    color: white;
+    font-style: italic;
+    opacity: 0s;
+    } */
+    /* .container .box::after
+    {content: 'ENTANGELA';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 5em;
+    font-weight: 900;
+    color: rgb(160, 255, 215);
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s;
+    } */
+    .container .box:hover::before
+    .container .box:hover::after
+    {opacity: 0.04;
+    }
+    .container .box .name
+    {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color:rgb(255, 255, 255);
+    width: 100%;
+    /* transform-style: preserve-3d;
+    transform: translate3d(0,0,75px); */
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+    }
+    .container .box:hover .name
+    {
+    top: 40px;
+    opacity: 1;
+    }
+    .container .box .description
+    {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    /* transform-style: preserve-3d; */
+    transform: translate3d(0,0,75px);
+    color:rgb(255, 255, 255);
+    background:rgb(30, 30, 30);
+    padding: 20px 25px;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+    }
+    .container .box:hover .description
+    {
+    bottom: 20px;
+    opacity: 0.8;
+    }
+    /* .container .box .circle
+    {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width:200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: 0.5s;
+    background:rgb(255, 160, 180);
+    transform-style: preserve-3d;
+    z-index: 10;
+    opacity: 0;
+    transform: transalte3d(-50%, -50%, 50px);
+    } */
+    .container .box .product
+    {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 300px;
+    transition: 0.5s;
+    z-index: 11;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%, -50%, 50px);
+    }
+    .container .box:hover .product
+    {
+    transform: translate3d(-50%, -50%, 0px)
+    }
+    .container .box:nth-child(1) .circle,
+    .container .box:nth-child(1) .buy
+    {
+    background:rgb(255, 160, 160)
+    }

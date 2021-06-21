@@ -1,0 +1,223 @@
+html {
+  height: 100%
+    /* you define the size of the playground, only for this example useful, scrolling situations = nono */
+}
+
+body {
+  height: 100%;
+  /* you define the size of the playground, only for this example useful, scrolling situations = nono */
+  font-family: 'RocknRoll One', sans-serif;
+  color: #8d0d67;
+  display: flex;
+  justify-content: center;
+  /* horizontal */
+  align-items: center;
+  /* vertical*/
+}
+
+.hidefee {
+  display: none;
+}
+
+#fee {
+  margin-left: 184px;
+  margin-bottom: 5px;
+}
+
+#feebutton {
+  margin-left: 171px;
+  color: #8d0d67;
+}
+
+.card {
+  /* mimicks a quartet card game card size JS */
+  width: 430px;
+  height: 665px;
+  padding: 10px;
+  /* background-color just here to make the card visible, can be changed JS */
+  background-color: #8d0d67;
+  /* makes the appearance look more like a card, up to you to change JS*/
+  border-radius: 10px;
+}
+
+.cardtitle {
+  background-image: linear-gradient(to right, #ccc, #f676c1, #ccc);
+  font-size: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 24px;
+}
+
+.cardbase {
+  height: 100%;
+  background-color: cornsilk;
+  border-radius: 50px;
+  overflow: hidden;
+  /*  "mask" so the code before isn't overwritten by cardbase */
+  display: flex;
+  flex-direction: column;
+}
+
+.dots {
+  background-color: #8d0d67;
+  display: flex;
+  flex-direction: row;
+}
+
+.dot {
+  font-size: 0;
+  /* to not have the font-spaces */
+  text-align: center;
+  flex-grow: 1;
+}
+
+@keyframes dotanimation {
+  0% {
+    transform: scale(1);
+  }
+
+  20% {
+    transform: scale(2);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+
+  60% {
+    transform: scale(1);
+  }
+
+  80% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.dot img {
+  animation-name: dotanimation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  height: 40px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.dot:nth-child(2) img {
+  animation-delay: 1s;
+}
+
+.dot:nth-child(3) img {
+  animation-delay: 2s;
+}
+
+.dot:nth-child(4) img {
+  animation-delay: 3s;
+}
+
+.dot:nth-child(5) img {
+  animation-delay: 4s;
+}
+
+.cardpicbox {
+  background-color: #8d0d67;
+  padding: 24px;
+  background-image: url("img/Background.png");
+  background-size: cover;
+  /* background as big as cardpicbox */
+  background-position: 50% 50%;
+  /* scale x / y */
+  flex-grow: 1;
+  overflow: auto;
+  /* so flex-grow works with image integrated */
+}
+
+.cardpic {
+  height: 100%;
+  /* so the croping will be possible or for now "platzhalter" */
+}
+
+.cardpic img {
+  display: block;
+  object-fit: cover;
+  object-position: top;
+  width: 100%;
+  height: 100%;
+}
+
+.infobox {
+  font-size: 15px;
+  font-family: 'RocknRoll One', sans-serif;
+  padding: 24px;
+  background-image: url("img/Backgroundupsidedown.png");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.infotable {
+  padding: 12px;
+  background-color: #ccc;
+  margin-bottom: 24px;
+}
+
+.infotable table {
+  /* table is seen as a html tag like "body" or "HTML" */
+  width: 100%;
+  /* doesn't do the whole column otherwise */
+  background-color: #ccc;
+  font-size: 18.75px;
+}
+
+.infotable td:first-child {
+  color: black;
+  /* text-transform:uppercase; to make text capitalized, no need now bc japanese */
+}
+
+p.infotext {
+  background-color: #ccc;
+  padding: 12px;
+}
+
+.end {
+  background-image: linear-gradient(to right, #ccc, #f676c1, #ccc);
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+@keyframes lineanimation {
+  from {
+    background-image: linear-gradient(to right, #ccc, #8d0d67, #ccc)
+  }
+
+  to {
+    background-image: linear-gradient(to right, #8d0d67, #ccc, #8d0d67)
+  }
+}
+
+.line {
+  animation-name: lineanimation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  height: 5px;
+  width: 90px;
+  margin: 0 20px;
+  /* 0 margin top  20px margin left/right */
+  border-radius: 5px;
+}
+
+.circle {
+  background-color: #8d0d0d;
+  height: 10px;
+  width: 10px;
+  margin: 0 20px;
+  border-radius: 10px;
+}

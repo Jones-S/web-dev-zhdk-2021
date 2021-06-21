@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title> Cresent Entangela</title>
+      <meta name="description" content="product card">
+      <meta name="author" content="Silvan Weber">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+</head>
+   <body>
+      <div class="container">
+         <div class="box">
+            <h2 class="name typefaceTitle">CRESENT <br> ENTANGELA</h2>
+            <a href="#" class="description typefaceDescription">
+            Orbiting around Jupiter, these two interlocking spheres now 
+            known as Cresent Entangela seem to have appeared out of nowhere. 
+            <br><br> 
+            While the overall mass of the twins is unchanging, the two 
+            counterparts seem subject to constant fluctuations in density. 
+            <br><br>  This quantum entanglement weaves intricate patterns 
+            into the surface of these two jovian satellites.</a>
+            <img src="entangela.gif" 
+               alt="Rotating sphere made of two symetrical interlocking parts (Ying-Yang like)." class="product">
+         </div>
+      </div>
+      <script src="vanilla-tilt.min.js"></script>
+      <script>
+         VanillaTilt.init(document.querySelectorAll(".box"), {
+         	max : 25,
+         	speed: 400
+         });
+      </script>
+   </body>
+</html>
+<!-- Cresent Tangela was created during Digital Fabrication course.
+   javascript library: https://micku7zu.github.io/vanilla-tilt.js/
+   tutorial library: https://www.youtube.com/watch?v=W3pQXyjTKps -->

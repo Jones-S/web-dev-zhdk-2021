@@ -1,0 +1,73 @@
+@font-face {
+    font-family: goldman;
+    src: url(../data/Goldman-Regular.ttf);
+  }
+
+body{
+   background-color: black; 
+   font-family: goldman;
+}
+
+.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 10px;
+}
+
+.card {
+    border-style: double;
+    border-radius: 15px;
+    border-width: 10px;
+    border-color: whitesmoke;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    width: 430px; 
+    height:665px;
+}
+
+.textProperties{
+   border: 1px;
+   border-color: white;
+   position: absolute;
+}
+
+h1.textProperties{
+    transform: translateZ(70px);
+    text-align: center;
+    color: white;
+    width: 100%;
+    top: 400px;
+}
+
+p.textProperties{
+    transform: translateZ(30px);
+    text-align: center;
+    color: whitesmoke;
+    width: 100%;
+    top: 520px;
+}
+
+#spaceship {
+transform: translateZ(100px);
+height: 200px;
+width: 200px;
+position: absolute;
+top: 20%;
+left: 28%;
+}
+
+#laser {
+    background: #ff0000;
+    width: 10px;
+    height: 10px;
+    top: 20%;
+    left: 50%;
+    border-radius: 50%;
+    position: absolute;
+  }
+
+#starfield{
+    transform: translateZ(-50px);
+}

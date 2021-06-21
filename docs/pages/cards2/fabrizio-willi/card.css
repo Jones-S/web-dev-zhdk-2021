@@ -1,0 +1,108 @@
+:root {
+  --card-content-width: 50%;
+  --spacer-default: 1.5rem;
+  --font-size-default: 20px;
+}
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: rgb(255, 255, 255);
+  font-size: 72%;
+  color: rgb(255, 255, 255);
+}
+
+.card {
+  border-radius: 10px;
+}
+
+div {
+  width: 430px;
+  height: 665px;
+  margin: 10px auto;
+  background-color: #714730;
+
+  margin: 1rem auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-title-wrapper {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: #ffffff3d;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-title {
+  text-align: center;
+  font-size: 30px;
+  line-height: 1.2;
+  justify-self: center;
+}
+
+.image-wrapper {
+  width: 300px;
+  margin: 0 auto;
+  /*margin-bottom: calc(var(--spacer-default) * 2);*/
+
+  position: relative;
+}
+.card-image {
+  max-width: 100%;
+}
+.image-label {
+  font-size: 15px;
+  color: crimson;
+
+  position: absolute;
+  right: 0;
+  top: 50%;
+
+  transform-origin: 50% 50%;
+
+  transform: translate(calc(50% + 2rem), -50%) rotate(90deg);
+}
+.image-label2 {
+  font-size: 15px;
+  color: #3cbe1b;
+
+  position: absolute;
+  left: 0;
+  top: 50%;
+
+  transform-origin: 50% 50%;
+
+  transform: translate(calc(-100%), -50%) rotate(270deg);
+}
+.card-text {
+  text-align: center;
+  background-color: #ffffff3d;
+  padding: 15px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+progress {
+  width: 300px;
+  background: rgb(173, 32, 32);
+}
+
+progress::-moz-progress-bar {
+  background: #3cbe1b;
+}
